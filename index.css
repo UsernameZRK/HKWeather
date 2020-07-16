@@ -18,7 +18,7 @@ div{
     padding: 0;
     display: grid;
     height: 100vh;
-    width: 100%;
+    width: 100vw;
     grid-template-rows: 30% 60% 10%;
     grid-template-areas: "header" "days" "footer";
     justify-items: center;
@@ -73,6 +73,7 @@ div{
 .icon{
     height: 60%;
     width: auto;
+    max-width: 100%;
 }
 
 .header span{
@@ -210,6 +211,7 @@ div{
 @media all and (max-width: 1000px) {
     .container{
         grid-template-rows: 50% 40% 10%;
+        height: 90%;
     }
 
     .header{
