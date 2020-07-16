@@ -211,6 +211,7 @@ div{
 @media all and (max-width: 1000px) {
     .container{
         grid-template-rows: 50% 40% 10%;
+        height: 100%;
     }
     
     body{
