@@ -207,7 +207,7 @@ div{
     cursor: pointer;
 }
 
-@media only screen and (max-width: 1000px) {
+@media all and (max-width: 1000px) {
     .container{
         grid-template-rows: 50% 40% 10%;
     }
