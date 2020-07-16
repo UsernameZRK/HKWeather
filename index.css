@@ -212,6 +212,10 @@ div{
     .container{
         grid-template-rows: 50% 40% 10%;
     }
+    
+    body{
+        height: 90%;
+    }
 
     .header{
         grid-template-columns: 30% 30% 40%;
