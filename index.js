@@ -120,7 +120,7 @@ async function main() {
     var maxtemp = `maxtemp${i}`;
     var mintemp = `mintemp${i}`;
     var fweather = `fweather${i}`;
-    if (i+a > 9) {
+    if (i+a > Fdata.weatherForecast.length) {
       document.getElementById(maxtemp).innerHTML = "";
       document.getElementById(mintemp).innerHTML = "";
       document.getElementById(fweather).style.display = "none";
@@ -136,7 +136,7 @@ async function main() {
   for (let i = 0; i < 10; i++) {
     var name = `name${i + 1}`;
     var loctemp = `loctemp${i + 1}`;
-    if (i + a*2 > 26) {
+    if (i + a*2 >= Odata.temperature.data.length) {
       document.getElementById(name).innerHTML = "";
       document.getElementById(loctemp).innerHTML = "";
     } else {
