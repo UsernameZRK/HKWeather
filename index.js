@@ -1,7 +1,7 @@
 var d = new Date();
 var weekday = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
-var weathericon = ["Sunny", "Cloudy", "Rainy", "Rainy", "Rainy", "Cloudy", "Thunder", "Cloudy", "Cloudy", "Windy", "Foggy", "Sunny"];
-var weathercode = [50, 51, 53, 54, 62, 61, 65, 76, 77, 80, 84, 90];
+var weathericon = ["Sunny", "Cloudy", "Rainy", "Rainy", "Rainy", "Cloudy", "Rainy", "Thunder", "Cloudy", "Cloudy", "Windy", "Foggy", "Sunny"];
+var weathercode = [50, 51, 53, 54, 62, 61, 63, 65, 76, 77, 80, 84, 90];
 var a = 0;
 var b = 5;
 document.getElementById("left").style.display = "none";
