@@ -1,7 +1,5 @@
 var d = new Date();
 var weekday = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
-var weathericon = ["Sunny", "Cloudy", "Rainy", "Rainy", "Rainy", "Cloudy", "Rainy", "Thunder", "Cloudy", "Cloudy", "Windy", "Foggy", "Sunny"];
-var weathercode = [50, 51, 53, 54, 62, 61, 63, 65, 76, 77, 80, 84, 90];
 var a = 0;
 var b = 5;
 document.getElementById("left").style.display = "none";
@@ -97,14 +95,13 @@ async function main() {
     alert("Unable to retrieve weather data"); return;
   }
 
-  var weather = weathericon[weathercode.indexOf(Odata.icon[0])];
   var week = weekday[d.getDay()];
   var day = d.getDate();
   var mon = d.getMonth() + 1;
   var hour = d.getHours();
   var min = d.getMinutes();
-  document.getElementById("h-info").innerHTML = day + "/" + mon + " " + hour + ":" + min + " " + week + " " + weather;
-  document.getElementById("icon").src = 'weather/' + weather + '.png';
+  document.getElementById("h-info").innerHTML = day + "/" + mon + " " + hour + ":" + min + " " + week + " ";
+  document.getElementById("icon").src = 'http://www.weather.gov.hk/images/HKOWxIconOutline/pic' + Odata.icon[0] + '.png';
   document.getElementById("h-humi").innerHTML = Odata.humidity.data[0].value + "<small>%</small>";
 
   for (let i = 0; i < Odata.temperature.data.length; i++) {
@@ -125,11 +122,10 @@ async function main() {
       document.getElementById(mintemp).innerHTML = "";
       document.getElementById(fweather).style.display = "none";
     }else{
-      var fweathericon = weathericon[weathercode.indexOf(Fdata.weatherForecast[i-1+a].ForecastIcon)];
       document.getElementById(maxtemp).innerHTML = Fdata.weatherForecast[i-1+a].forecastMaxtemp.value + "<small>°C</small>";
       document.getElementById(mintemp).innerHTML = Fdata.weatherForecast[i-1+a].forecastMintemp.value + "<small>°C</small>";
       document.getElementById(fweather).style.display = "block";
-      document.getElementById(fweather).src = 'weather/' + fweathericon + '.png';
+      document.getElementById(fweather).src = 'http://www.weather.gov.hk/images/HKOWxIconOutline/pic' + Fdata.weatherForecast[i-1+a].ForecastIcon + '.png';
     }
   }
 
